@@ -1,0 +1,24 @@
+<button routerLink="/employees">Go Back</button>
+
+<p *ngIf="loading">Loading</p>
+<p *ngIf="saving">Saving</p>
+
+<div *ngIf="!loading">
+  <p *ngIf="message">{{message}}</p>
+  <p>Id: {{employee?.id}}</p>
+  <form (submit)="handleSubmit()" [formGroup]="employeeForm">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" [value]="employee?.name" />
+    </div>
+    <div>
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" [value]="employee?.title" />
+    </div>
+    <div>
+      <label for="department">Department</label>
+      <input id="department" type="text" formControlName="department" [value]="employee?.department" />
+    </div>
+    <button type="submit">Change</button>
+  </form>
+</div>

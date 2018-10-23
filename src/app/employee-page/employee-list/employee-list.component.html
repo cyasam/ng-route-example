@@ -1,0 +1,23 @@
+<button routerLink="/employees/new">New</button>
+
+<p *ngIf="loading">Loading</p>
+<table *ngIf="!loading">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Title</td>
+      <td>Department</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.title}}</td>
+      <td>{{employee.department}}</td>
+      <td><a routerLink="/employees/detail/{{employee.id}}">Go</a></td>
+    </tr>
+  </tbody>
+</table>

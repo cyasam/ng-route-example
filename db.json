@@ -1,0 +1,40 @@
+{
+  "employees": [
+    {
+      "name": "John Doew",
+      "title": "Backend Developer",
+      "department": "Software",
+      "id": 1
+    },
+    {
+      "name": "Michael John",
+      "title": "Sale advisor",
+      "department": "Sales",
+      "id": 2
+    },
+    {
+      "name": "Ünal Delil",
+      "title": "Frontend Developer",
+      "department": "Software",
+      "id": 3
+    },
+    {
+      "name": "Çağdaş",
+      "title": "Frontend Developer",
+      "department": "Design&Frontend",
+      "id": 4
+    },
+    {
+      "name": "Byukin Pulchenkov",
+      "title": "Social Media Expert",
+      "department": "Advertisement",
+      "id": 5
+    },
+    {
+      "name": "Özgür Işık",
+      "title": "UX Designer",
+      "department": "Design",
+      "id": 6
+    }
+  ]
+}

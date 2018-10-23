@@ -1,0 +1,20 @@
+<button routerLink="/employees">Go Back</button>
+<div>
+  <p *ngIf="message">{{message}}</p>
+  <p *ngIf="saving">Saving</p>
+  <form (submit)="handleSubmit()" [formGroup]="newEmployeeForm">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+    <div>
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" />
+    </div>
+    <div>
+      <label for="department">Department</label>
+      <input id="department" type="text" formControlName="department" />
+    </div>
+    <button type="submit">Change</button>
+  </form>
+</div>
