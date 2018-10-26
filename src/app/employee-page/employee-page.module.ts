@@ -38,4 +38,4 @@ const employeeRoutes = [
   ],
   declarations: [ EmployeePageComponent, EmployeeListComponent, EmployeeComponent, EmployeeNewComponent ]
 })
-export class EmployeePageModule { }
+export default class EmployeePageModule { }

@@ -15,7 +15,7 @@ const appRoutes = [
   },
   {
     path: 'employees',
-    loadChildren: './employee-page/employee-page.module#EmployeePageModule'
+    loadChildren: './employee-page/employee-page.module'
   }
 ]
 

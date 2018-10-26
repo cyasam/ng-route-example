@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "name": "John Doew",
+      "name": "John Doe",
       "title": "Backend Developer",
       "department": "Software",
       "id": 1
@@ -19,7 +19,7 @@
       "id": 3
     },
     {
-      "name": "Çağdaş",
+      "name": "Çağdaş Işık",
       "title": "Frontend Developer",
       "department": "Design&Frontend",
       "id": 4

@@ -9,15 +9,15 @@
   <form (submit)="handleSubmit()" [formGroup]="employeeForm">
     <div>
       <label for="name">Name</label>
-      <input id="name" type="text" formControlName="name" [value]="employee?.name" />
+      <input id="name" type="text" formControlName="name" [value]="employee?.name" autocomplete="off" />
     </div>
     <div>
       <label for="title">Title</label>
-      <input id="title" type="text" formControlName="title" [value]="employee?.title" />
+      <input id="title" type="text" formControlName="title" [value]="employee?.title" autocomplete="off" />
     </div>
     <div>
       <label for="department">Department</label>
-      <input id="department" type="text" formControlName="department" [value]="employee?.department" />
+      <input id="department" type="text" formControlName="department" [value]="employee?.department" autocomplete="off" />
     </div>
     <button type="submit">Change</button>
   </form>
