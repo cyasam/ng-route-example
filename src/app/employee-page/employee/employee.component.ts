@@ -4,7 +4,7 @@ import { EmployeeService } from '../../services/employee.service';
 
 import { EmployeeModel } from '../../model/employee.model';
 
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
@@ -31,9 +31,9 @@ export class EmployeeComponent implements OnInit {
     this.employeeService.getEmployee(this.id).subscribe(result => {
       this.employee = result;
       this.employeeForm = this.fb.group({
-        name: [this.employee.name],
-        title: [this.employee.title],
-        department: [this.employee.department]
+        name: [this.employee.name, [Validators.required, Validators.minLength ]],
+        title: [this.employee.title, [Validators.required, Validators.minLength ]],
+        department: [this.employee.department, [Validators.required, Validators.minLength ]]
       })
 
       this.loading = false;
@@ -46,6 +46,11 @@ export class EmployeeComponent implements OnInit {
 
   handleSubmit() {
     this.message = '';
+    console.log(this.employeeForm.controls.name.errors)
+    if(this.employeeForm.invalid) {
+      return;
+    }
+
     this.saving = true;
     const formValue = this.employeeForm.value;
     this.employeeService.updateEmployee(this.id, formValue).subscribe(
